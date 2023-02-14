@@ -1,16 +1,14 @@
-package com.lifesizedshents;
+package com.gnomechildify;
 
 import net.runelite.client.config.*;
 
-import java.awt.*;
-
-@ConfigGroup("lifesizedshents")
-public interface LifeSizedShentsConfig extends Config
+@ConfigGroup("gnomechildify")
+public interface GnomeChildifyConfig extends Config
 {
 	@ConfigItem(
 			keyName = "rsn",
 			name = "RSN",
-			description = "RSN of account to shents-ify on spawn",
+			description = "RSN of account to gnome child-ify on spawn",
 			position = 10
 	)
 	default String rsn()

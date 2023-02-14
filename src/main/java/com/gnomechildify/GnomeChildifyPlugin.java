@@ -1,4 +1,4 @@
-package com.lifesizedshents;
+package com.gnomechildify;
 
 import com.google.inject.Provides;
 import lombok.extern.slf4j.Slf4j;
@@ -14,21 +14,21 @@ import javax.inject.Inject;
 import java.awt.*;
 
 @PluginDescriptor(
-		name = "Life Sized Shents",
-		description = "Accurate shents representation"
+		name = "Gnome Childify",
+		description = "Turn your friends into a gnome child for hilarious moments!"
 )
 @Slf4j
-public class LifeSizedShentsPlugin extends Plugin
+public class GnomeChildifyPlugin extends Plugin
 {
 	@Inject
 	private Client client;
 	@Inject
-	private LifeSizedShentsConfig config;
+	private com.gnomechildify.GnomeChildifyConfig config;
 
 	@Provides
-	LifeSizedShentsConfig provideConfig(ConfigManager configManager)
+	com.gnomechildify.GnomeChildifyConfig provideConfig(ConfigManager configManager)
 	{
-		return configManager.getConfig(LifeSizedShentsConfig.class);
+		return configManager.getConfig(GnomeChildifyConfig.class);
 	}
 
 	@Subscribe
@@ -39,7 +39,7 @@ public class LifeSizedShentsPlugin extends Plugin
 				&& event.getType() == MenuAction.PLAYER_THIRD_OPTION.getId())
 		{
 			client.createMenuEntry(-1)
-					.setOption(ColorUtil.prependColorTag("Shentsify", Color.ORANGE))
+					.setOption(ColorUtil.prependColorTag("Gnome Childify", Color.ORANGE))
 					.setTarget(event.getTarget())
 					.setIdentifier(event.getIdentifier())
 					.setType(MenuAction.RUNELITE_PLAYER);
@@ -50,7 +50,7 @@ public class LifeSizedShentsPlugin extends Plugin
 	private void onMenuOptionClicked(MenuOptionClicked event)
 	{
 		if (event.getMenuAction() == MenuAction.RUNELITE_PLAYER
-				&& event.getMenuOption().contains("Shentsify"))
+				&& event.getMenuOption().contains("Gnome Childify"))
 		{
 			final int id = event.getId();
 			final Player[] cachedPlayers = client.getCachedPlayers();

@@ -23,8 +23,8 @@ dependencies {
 	testImplementation group: 'net.runelite', name:'jshell', version: runeLiteVersion
 }
 
-group = 'com.lifesizedshents'
-version = '0.1.0'
+group = 'com.gnomechildify'
+version = '0.2.0'
 sourceCompatibility = '1.8'
 
 tasks.withType(JavaCompile) {

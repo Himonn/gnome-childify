@@ -1,7 +1,2 @@
-# Life Sized Shents
-
-This plugin automatically turns any player with the RSN 'shents' to a Gnome Child
-
-## Contact
-
-Discord: Himon#0594
+# Gnome Childify
+This plugin automatically turns any player you choose into a gnome child!
