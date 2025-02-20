@@ -53,8 +53,7 @@ public class GnomeChildifyPlugin extends Plugin
 				&& event.getMenuOption().contains("Gnome Childify"))
 		{
 			final int id = event.getId();
-			final Player[] cachedPlayers = client.getCachedPlayers();
-			final Player player = cachedPlayers[id];
+			final Player player = client.getTopLevelWorldView().players().byIndex(id);
 
 			if (player == null || player.getName() == null)
 			{
